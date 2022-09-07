@@ -1,21 +1,21 @@
-const secondponteiro = document.querySelector('.second-ponteiro');
-const minsponteiro = document.querySelector('.min-ponteiro');
-const hourponteiro = document.querySelector('.hour-ponteiro');
+const segundoPonteiro = document.querySelector('.ponteiro-segundos');
+const minutoPonteiro = document.querySelector('.ponteiro-minutos');
+const horaPonteiro = document.querySelector('.ponteiro-horas');
 
 function setDate() {
     const now = new Date();
 
-    const seconds = now.getSeconds();
-    const secondsDegrees = ((seconds / 60) * 360) + 90;
-    secondponteiro.style.transform = `rotate(${secondsDegrees}deg)`;
+    const segundo = now.getSeconds();
+    const segundoDegrees = ((segundo / 60) * 360) + 90;
+    segundoPonteiro.style.transform = `rotate(${segundoDegrees}deg)`;
 
-    const mins = now.getMinutes();
-    const minsDegrees = ((mins / 60) * 360) + ((seconds / 60) * 6) + 90;
-    minsponteiro.style.transform = `rotate(${minsDegrees}deg)`;
+    const minuto = now.getMinutes();
+    const minutoDegrees = ((minuto / 60) * 360) + ((segundo / 60) * 6) + 90;
+    minutoPonteiro.style.transform = `rotate(${minutoDegrees}deg)`;
 
-    const hour = now.getHours();
-    const hourDegrees = ((hour / 12) * 360) + ((mins / 60) * 30) + 90;
-    hourponteiro.style.transform = `rotate(${hourDegrees}deg)`;
+    const hora = now.getHours();
+    const horaDegrees = ((hora / 12) * 360) + ((minuto / 60) * 30) + 90;
+    horaPonteiro.style.transform = `rotate(${horaDegrees}deg)`;
 }
 
 setInterval(setDate, 1000);

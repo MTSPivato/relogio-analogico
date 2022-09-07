@@ -126,18 +126,18 @@ body {
     transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
 }
 
-.ponteiro.hour-ponteiro {
+.ponteiro.ponteiro-horas {
     width: 30%;
     z-index: 3;
 }
 
-.ponteiro.min-ponteiro {
+.ponteiro.ponteiro-minutos {
     height: 3px;
     z-index: 10;
     width: 40%;
 }
 
-.ponteiro.second-ponteiro {
+.ponteiro.ponteiro-segundos {
     background: #ff00c8;
     width: 45%;
     height: 2px;
